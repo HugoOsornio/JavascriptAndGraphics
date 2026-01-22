@@ -1,5 +1,9 @@
 // WebGPU Rotating 3D Cube Implementation
 
+// Animation constants
+const ROTATION_SPEED = 0.01;
+const X_ROTATION_FACTOR = 0.7;
+
 // Vertex shader - processes each vertex of the cube
 const vertexShaderCode = `
 struct Uniforms {
@@ -355,7 +359,7 @@ class CubeApp {
         // Create model matrix with rotation
         const model = Mat4.create();
         Mat4.identity(model);
-        Mat4.rotateX(model, model, this.rotation * 0.7);
+        Mat4.rotateX(model, model, this.rotation * X_ROTATION_FACTOR);
         Mat4.rotateY(model, model, this.rotation);
         
         // Combine matrices: projection * view * model
@@ -370,7 +374,7 @@ class CubeApp {
 
     render() {
         // Update rotation
-        this.rotation += 0.01;
+        this.rotation += ROTATION_SPEED;
         this.updateTransformationMatrix();
 
         // Create command encoder

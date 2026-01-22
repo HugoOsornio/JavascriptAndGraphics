@@ -1,6 +1,6 @@
-# JavascriptAndGraphics
+# JavaScriptAndGraphics
 
-Repo to use AI to go over 2 Javascript books:
+Repo to use AI to go over 2 JavaScript books:
 - JavaScript: The Comprehensive Guide to Learning Professional JavaScript Programming
 - Modern JavaScript for the Impatient
 
